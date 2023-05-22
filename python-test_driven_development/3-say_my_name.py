@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-This module prints the name of a anything
+This module prints  the name of a anything
 
 Output: 'My name is <first name> <last name>'
 
