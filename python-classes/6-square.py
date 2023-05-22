@@ -4,12 +4,13 @@
 
 class Square:
     """Define the square class"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialize the square"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+
         if self.__check_tuple(position) is False \
            or self.__check_indexes(position) is False \
            or self.__check_integers(position) is False \
