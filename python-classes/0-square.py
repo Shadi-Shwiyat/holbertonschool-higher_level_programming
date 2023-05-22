@@ -4,6 +4,5 @@
 
 class Square:
     """Define the square class"""
-    def __init__(self, size=None):
+    def __init__(self):
         """Initialize the square class to none"""
-        self.size = size
