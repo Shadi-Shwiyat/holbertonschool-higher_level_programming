@@ -81,8 +81,15 @@ class Square:
             print()
             return None
 
-        for i in range(1, self.area() + 1):
-            print('#', end='')
+        if self.__position[1] > 0:
+            for i in range(self.__position[1]):
+                print('')
 
-            if i % self.__size == 0 and i > 0:
+        for j in range(1, self.area() + 1):
+            if j % self.__size == 1:
+                print('{:>{w}}'.format('#', w=self.__position[0] + 1), end='')
+            else:
+                print('#', end='')
+
+            if j % self.__size == 0 and j > 0:
                 print()
