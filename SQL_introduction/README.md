@@ -1,0 +1,1 @@
+This repo holds tasks related to an intro to SQL
