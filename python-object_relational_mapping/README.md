@@ -1,0 +1,1 @@
+This repo holds task to link Databases and Python code using SQL
