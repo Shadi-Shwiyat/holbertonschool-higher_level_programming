@@ -10,5 +10,5 @@ if (args[0] === undefined || isNaN(number)) {
   while (i < number) {
     console.log('C is fun');
     i++;
-  }
+    }
 }
