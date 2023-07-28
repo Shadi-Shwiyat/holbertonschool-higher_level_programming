@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function bubbleSort(array) {
+function bubbleSort (array) {
   const n = array.length;
 
   for (let i = 0; i < n - 1; i++) {
@@ -19,13 +19,13 @@ function bubbleSort(array) {
 }
 
 const args = process.argv.slice(2);
-let unsortedArray = [];
+const unsortedArray = [];
 
 if (args[0] === undefined || args[1] === undefined) {
   console.log('0');
 } else {
   let i = 0;
-  while (args[i] != undefined) {
+  while (args[i] !== undefined) {
     unsortedArray.push(Number(args[i]));
     i++;
   }
