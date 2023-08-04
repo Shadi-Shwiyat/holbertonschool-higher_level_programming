@@ -9,6 +9,6 @@ request.get(url, (error, response) => {
   if (error) {
     console.error('Failed to send request', error);
   } else {
-    console.log('code:', response.statusCode);
+    console.log('code: ', response.statusCode);
   }
 });
