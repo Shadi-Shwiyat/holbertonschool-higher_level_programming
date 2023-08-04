@@ -17,7 +17,6 @@ request.get(url, (error, response, body) => {
       for (const characterUrl of movie.characters) {
         if (characterUrl === charID) {
           moviesPresent++;
-          break;
         }
       }
     }
