@@ -1,25 +1,20 @@
 #!/usr/bin/node
-
 const request = require('request');
 
-const args = process.argv.slice(2);
-const url = args[0];
+const url = process.argv[2];
 
-request.get(url, (error, response, body) => {
-  if (error) {
-    console.error('Failed to send request', error);
-  } else {
-    const jsonData = JSON.parse(body);
-    const charID = 'https://swapi-api.hbtn.io/api/people/18/';
-    let moviesPresent = 0;
-
-    for (const movie of jsonData.results) {
-      for (const characterUrl of movie.characters) {
-        if (characterUrl === charID) {
-          moviesPresent++;
-        }
+request(url, function (err, response, body) {
+  if (err) throw err;
+  const data = JSON.parse(body).results;
+  let count = 0;
+  for (const movie in data) {
+    const chars = data[movie].characters;
+    // console.log(JSON.parse(body).title)
+    for (const char in chars) {
+      if (chars[char].includes('/18/')) {
+        count++;
       }
     }
-    console.log(moviesPresent);
   }
+  console.log(count);
 });
