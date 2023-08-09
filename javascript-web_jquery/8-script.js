@@ -6,7 +6,7 @@ $(document).ready(function () {
     var listMoviesDiv = $('#list_movies');
 
     for (var i = 0; i < movies.length; i++) {
-      listMoviesDiv.append('<p>' + movies[i].title + '</p>');
+      listMoviesDiv.append('<li>' + movies[i].title + '<li>');
     }
   });
 });
