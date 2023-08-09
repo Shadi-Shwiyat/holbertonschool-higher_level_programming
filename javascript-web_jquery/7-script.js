@@ -9,9 +9,8 @@ request.get(url, (err, response, body) => {
   } else {
     const jsonData = JSON.parse(body);
     const name = jsonData.name;
+    console.log(name);
 
-    $(document).ready(function () {
-      $("#character").text(name);
-    });
+    //$("#character").text(name);
   }
 });
